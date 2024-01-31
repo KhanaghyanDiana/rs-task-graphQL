@@ -1,5 +1,5 @@
 import { FastifyPluginAsyncTypebox, Type } from '@fastify/type-provider-typebox';
-import { getUserByIdSchema, userSchema } from '../../schemas.js';
+import { getUserByIdSchema, userSchema } from '../../mutations.js';
 
 const plugin: FastifyPluginAsyncTypebox = async (fastify) => {
   const { prisma } = fastify;
