@@ -12,14 +12,13 @@ export class HttpCompatibleError extends Error {
 }
 
 export default fp(
-  async (fastify) => {
+  async (fastify) =>
     fastify.setErrorHandler((error) => {
       if (error instanceof HttpCompatibleError) {
         return fastify.httpErrors.getHttpError(error.httpCode, error.message);
       }
       return error;
-    });
-  },
+    }),
   {
     dependencies: [sensiblePluginTag],
   },

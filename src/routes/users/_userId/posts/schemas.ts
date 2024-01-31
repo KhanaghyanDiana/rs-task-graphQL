@@ -1,5 +1,5 @@
 import { Type } from '@fastify/type-provider-typebox';
-import { userFields } from '../../schemas.js';
+import { userFields } from '../../mutations.js';
 
 export const getPostsByUserIdSchema = {
   params: Type.Object(

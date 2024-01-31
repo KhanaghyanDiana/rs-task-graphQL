@@ -1,5 +1,5 @@
 import { Type } from '@fastify/type-provider-typebox';
-import { getUserByIdSchema, userFields } from '../../schemas.js';
+import { getUserByIdSchema, userFields } from '../../mutations.js';
 
 export const subscribeToUserSchema = {
   params: getUserByIdSchema.params,
